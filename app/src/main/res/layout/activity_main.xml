@@ -54,7 +54,8 @@
         android:layout_marginBottom="96dp"
         android:text="Agregar"
         app:layout_constraintBottom_toTopOf="@+id/rcvMascotas"
-        tools:layout_editor_absoluteX="154dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvMascotas"

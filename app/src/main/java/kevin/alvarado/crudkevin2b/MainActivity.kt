@@ -91,6 +91,11 @@ class MainActivity : AppCompatActivity() {
                 addMascota.setInt(3, txtEdad.text.toString().toInt())
                 addMascota.executeUpdate()
 
+                //Refresco la lista
+                val nuevasMascotas = obtenerDatos()
+                withContext(Dispatchers.Main){
+                    (rcvMascotas.adapter as? Adaptador)?.actualizarLista(nuevasMascotas)
+                }
             }
         }
 
